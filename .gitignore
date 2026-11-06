@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.vercel
+*.log
+
+# Confidential source deck and working extracts. Not for the public repo.
+research/
+docs/PRESENTATION_CONTENT_AUDIT.md
+docs/PUBLICATION_APPROVAL_REQUIRED.md
