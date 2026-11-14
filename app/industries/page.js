@@ -1,26 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
 import JsonLd from "@/components/ui/JsonLd";
 import PageIntro from "@/components/ui/PageIntro";
+import { industries } from "@/data/industries";
 import { buildMeta } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
-
-const sectors = [
-  {
-    title: "Offshore oil and gas",
-    text: "Topsides, marine interfaces and brownfield modifications for floating and fixed facilities, including FPSO, FSO, FSRU and FLNG-related engineering, mobile offshore production units and platforms.",
-  },
-  {
-    title: "Refining",
-    text: "Brownfield modifications, turnaround engineering and project management consultancy for operating refineries. Bushehr Refinery is a consultancy engagement in this sector.",
-  },
-  {
-    title: "Onshore storage and process",
-    text: "Tank farms, transfer facilities and process-plant engineering. Hawax covers detailed engineering for a jet fuel and diesel tank farm.",
-  },
-  {
-    title: "Energy infrastructure",
-    text: "Utilities that let a facility run: power, water and modular packages.",
-  },
-];
 
 const crumbs = [
   { name: "Home", href: "/" },
@@ -29,7 +13,7 @@ const crumbs = [
 
 export const metadata = buildMeta({
   title: "Industries",
-  description: "Engineering for offshore facilities, refinery brownfield work, storage and energy infrastructure.",
+  description: "Engineering for oil and gas, petrochemicals, energy and industrial infrastructure.",
   path: "/industries",
 });
 
@@ -37,14 +21,22 @@ export default function IndustriesPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <PageIntro eyebrow="Industries" title="Where the engineering is applied." lede="Offshore facilities, operating refineries, storage and the utilities that keep a plant running." crumbs={crumbs} />
-      <div className="mx-auto max-w-3xl px-5 py-16">
-        {sectors.map((sector, index) => (
-          <article key={sector.title} className="border-t border-line py-12">
-            <p className="font-display text-4xl text-bronze">{String(index + 1).padStart(2, "0")}</p>
-            <h2 className="mt-3 font-display text-4xl text-navy">{sector.title}</h2>
-            <p className="mt-4 leading-relaxed text-steel">{sector.text}</p>
-          </article>
+      <PageIntro
+        eyebrow="Industries"
+        title="Where the engineering is applied."
+        lede="Offshore facilities, process plants, operating refineries, storage and the utilities that keep a plant running."
+        crumbs={crumbs}
+      />
+      <div className="mx-auto grid max-w-7xl gap-5 px-5 py-16 md:grid-cols-2">
+        {industries.map((item) => (
+          <Link key={item.slug} href={item.href} className="group relative block min-h-80 overflow-hidden bg-navy text-white">
+            <Image src={item.image} alt={item.imageAlt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071422] via-[#071422]/20 to-transparent" />
+            <div className="relative flex min-h-80 flex-col justify-end p-7">
+              <h2 className="font-display text-3xl">{item.title}</h2>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-white/80">{item.text}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </>

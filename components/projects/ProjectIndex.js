@@ -27,7 +27,7 @@ export default function ProjectIndex() {
             role="tab"
             aria-selected={filter === id}
             onClick={() => setFilter(id)}
-            className={`px-4 py-2 text-sm ${filter === id ? "bg-navy text-white" : "bg-white text-navy"}`}
+            className={`border px-4 py-2 text-sm transition-colors ${filter === id ? "border-navy bg-navy text-white" : "border-line bg-white text-navy hover:border-navy"}`}
           >
             {label}
           </button>

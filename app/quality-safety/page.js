@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CertificateShowcase from "@/components/content/CertificateShowcase";
 import JsonLd from "@/components/ui/JsonLd";
 import PageIntro from "@/components/ui/PageIntro";
 import { buildMeta } from "@/lib/metadata";
@@ -25,10 +26,16 @@ export default function QualityPage() {
         lede="An integrated management system covering quality, environment and occupational health and safety."
         crumbs={crumbs}
       />
-      <article className="mx-auto max-w-3xl space-y-6 px-5 py-16 text-lg leading-relaxed text-steel">
-        <p>Hazard identification, operability review and the controls around a modification sit with the discipline work.</p>
-        <p>Quality, environmental and occupational health and safety management are certified to ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018.</p>
-        <Link href="/certifications" className="inline-flex text-base font-semibold text-navy underline decoration-bronze">Read the three systems</Link>
+      <article className="mx-auto max-w-7xl px-5 py-16">
+        <p className="max-w-3xl text-lg leading-relaxed text-steel">
+          Hazard identification, operability review and the controls around a modification sit with the discipline work. The three certificates below are the documents published on oteprojects.com.
+        </p>
+        <div className="mt-10">
+          <CertificateShowcase />
+        </div>
+        <Link href="/certifications" className="mt-8 inline-flex text-sm font-semibold text-navy underline decoration-bronze underline-offset-4">
+          Certifications
+        </Link>
       </article>
     </>
   );

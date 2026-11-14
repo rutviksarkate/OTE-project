@@ -1,21 +1,31 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --color-navy: #101d2c;
-  --color-navy-2: #172a3c;
-  --color-steel: #526e86;
-  --color-bronze: #b68a55;
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  --color-navy: #0b1c33;
+  --color-navy-2: #132844;
+  --color-steel: #5c6b7a;
+  --color-bronze: #c65a12;
   --color-white: #ffffff;
-  --color-mist: #f4f6f8;
-  --color-ink: #172331;
-  --color-line: #d5dee7;
+  --color-mist: #f3f5f7;
+  --color-ink: #15202b;
+  --color-line: #d5dde5;
+}
+
+:root {
+  --header-offset: 4.25rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-offset: 6.5rem;
+  }
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: var(--header-offset);
   overflow-x: clip;
   overscroll-behavior: none;
 }
@@ -28,8 +38,132 @@ body {
 }
 
 ::selection {
-  background: #b68a55;
-  color: #101d2c;
+  background: #c65a12;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #c65a12;
+  outline-offset: 3px;
+}
+
+.pt-header {
+  padding-top: var(--header-offset);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c65a12;
+  color: #ffffff;
+  padding: 0.8rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-accent:hover {
+  background: #a84a0d;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  padding: 0.8rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-ghost:hover {
+  border-color: #c65a12;
+  color: #ffffff;
+  background: rgba(198, 90, 18, 0.16);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  height: 2px;
+  width: 100%;
+  background: #c65a12;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: #ffffff;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.mega-panel {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 40;
+  background: #ffffff;
+  color: #15202b;
+  border-top: 2px solid #c65a12;
+  box-shadow: 0 22px 40px rgba(7, 20, 34, 0.16);
+}
+
+.mega-panel.is-open {
+  display: block;
+  animation: mega-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mega-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mega-link {
+  display: block;
+  padding: 0.85rem 0.9rem;
+  transition: background-color 0.25s ease;
+}
+
+.mega-link:hover,
+.mega-link.is-active {
+  background: #f3f5f7;
+}
+
+.media-frame img {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.media-frame:hover img,
+.group:hover .media-frame img {
+  transform: scale(1.05);
 }
 
 .reveal {
@@ -52,12 +186,12 @@ body {
 }
 
 .hero-photo {
-  animation: hero-drift 18s ease-out both;
+  animation: hero-drift 22s ease-out both;
 }
 
 @keyframes hero-drift {
   from {
-    transform: scale(1.02);
+    transform: scale(1.06);
   }
   to {
     transform: scale(1);
@@ -66,7 +200,7 @@ body {
 
 .hero-mask {
   clip-path: inset(0 0 0 0);
-  animation: hero-wipe 1.3s cubic-bezier(0.77, 0, 0.18, 1) both;
+  animation: hero-wipe 1.15s cubic-bezier(0.77, 0, 0.18, 1) both;
 }
 
 @keyframes hero-wipe {
@@ -110,7 +244,7 @@ body {
 }
 
 .route-fade {
-  animation: route-fade 0.45s ease both;
+  animation: route-fade 0.4s ease both;
 }
 
 @keyframes route-fade {
@@ -136,10 +270,21 @@ body {
   .hero-photo,
   .hero-mask,
   .route-fade,
-  .marquee-track {
+  .marquee-track,
+  .mega-panel.is-open {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     clip-path: none !important;
+  }
+
+  .media-frame img,
+  .photo-frame img,
+  .group:hover img,
+  .btn-accent,
+  .btn-ghost,
+  .nav-link::after {
+    transition: none !important;
+    transform: none !important;
   }
 }
