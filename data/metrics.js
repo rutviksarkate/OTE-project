@@ -14,7 +14,6 @@ export const metrics = [
   },
   {
     id: "disciplines",
-    value: 8,
     label: "Engineering disciplines",
     detail: "Process through naval architecture",
   },

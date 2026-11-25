@@ -76,7 +76,7 @@ export default function CareersPage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-bronze">Disciplines</p>
-              <h2 className="mt-4 font-display text-4xl leading-none text-navy">Eight places the work sits.</h2>
+              <h2 className="mt-4 max-w-3xl font-display text-3xl leading-tight text-navy">The eight disciplines are Process Engineering, Mechanical Engineering, Piping Engineering, Structural Engineering, Construction and Project Management, Electrical Engineering, Instrumentation and Control, and Naval Architecture.</h2>
             </div>
             <Link href="/engineering-disciplines" className="text-sm font-semibold text-navy underline decoration-bronze underline-offset-4">
               Explore the disciplines

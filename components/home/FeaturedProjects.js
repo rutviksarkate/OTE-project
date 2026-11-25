@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">Projects</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight text-navy md:text-5xl">Published project experience.</h2>
-          <p className="mt-4 max-w-2xl text-steel">Three scopes are on this site. A wider register of named clients and facilities is not published.</p>
+          <p className="mt-4 max-w-2xl text-steel">FPSO Mystras, Hawax and Bushehr Refinery. A wider historical register is not published.</p>
         </Reveal>
         <Reveal>
           <article className="mt-12 grid overflow-hidden bg-navy text-white lg:grid-cols-2">
@@ -30,7 +30,7 @@ export default function FeaturedProjects() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-bronze">{labels[featured.category]}</p>
               <h3 className="mt-3 font-display text-4xl">{featured.name}</h3>
               <p className="mt-4 max-w-md leading-relaxed text-white/75">{featured.summary}</p>
-              <p className="mt-4 text-sm text-white/55">Location is not published for this scope.</p>
+              {featured.place ? <p className="mt-4 text-sm text-white/70">{featured.place}</p> : null}
               <Link href={`/projects/${featured.slug}`} className="mt-8 inline-flex text-sm font-semibold text-bronze">
                 Project details
               </Link>
@@ -44,7 +44,7 @@ export default function FeaturedProjects() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-bronze">{labels[project.category]}</p>
                 <h3 className="mt-3 font-display text-3xl text-navy">{project.name}</h3>
                 <p className="mt-4 flex-1 leading-relaxed text-steel">{project.summary}</p>
-                <p className="mt-4 text-sm text-steel/80">A project photograph and a location are not published for this scope.</p>
+                {project.place ? <p className="mt-4 text-sm text-steel/80">{project.place}</p> : null}
                 <Link href={`/projects/${project.slug}`} className="mt-6 inline-flex text-sm font-semibold text-navy underline decoration-bronze underline-offset-4">
                   Project details
                 </Link>

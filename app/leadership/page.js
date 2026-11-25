@@ -34,13 +34,36 @@ export default function LeadershipPage() {
         </div>
         <div className="max-w-3xl text-base leading-relaxed text-steel md:text-lg">
           <p>
-            Rajesh M. Sarkate has more than 29 years leading EPC, greenfield and brownfield work, from FEED through commissioning. The profile covers offshore, FPSO, FLNG, refining and petrochemicals, including asset integrity, platform revamps and plant handover.
+            Rajesh M. Sarkate has more than 31 years leading PMC, EPC, greenfield and brownfield work, from FEED through commissioning. The profile covers offshore, FPSO, FLNG, refining and petrochemicals, including asset integrity, platform revamps and plant handover.
           </p>
+          <p className="mt-4">
+            The 31 years describe his career. They are not a statement of how long the company has traded.
+          </p>
+          <h2 className="mt-10 font-display text-3xl text-navy">Responsibilities</h2>
+          <p className="mt-4">As General Manager – Projects he is responsible for the following.</p>
+          <ul className="mt-4 space-y-3 text-base">
+            {[
+              "Leading multidisciplinary project teams on PMC and EPC assignments, from FEED and detailed engineering through procurement support, construction, commissioning and handover.",
+              "Direction of greenfield and brownfield work, including high-risk asset integrity, platform revamps and large-scale plant handovers, held to the schedule and to the safety standard.",
+              "Offshore, FPSO, FLNG, refinery and petrochemical projects across the full lifecycle.",
+              "Coordination of engineering, project management, procurement and site execution so a scope stays buildable through start-up.",
+              "Technical and commercial support to clients and EPC contractors during bid preparation, execution and close-out.",
+            ].map((item) => (
+              <li key={item} className="border-l-2 border-bronze pl-4">{item}</li>
+            ))}
+          </ul>
+          <h2 className="mt-10 font-display text-3xl text-navy">Career experience</h2>
+          <ul className="mt-4 space-y-3 text-base">
+            {[
+              "Projects across India, the UAE, Nigeria and South Africa, for operators including ONGC, ExxonMobil and Sasol.",
+              "Experience with Samsung Heavy Industries, Saipem Triune, Dangote Refinery and Essar Projects.",
+              "A focus on high-risk asset integrity, platform revamps and large-scale plant handovers, completed on schedule under strict safety standards.",
+            ].map((item) => (
+              <li key={item} className="border-l-2 border-bronze pl-4">{item}</li>
+            ))}
+          </ul>
           <p className="mt-4">
             Operators and contractors named in that career are professional experience. They are not a client list of {company.legalName}.
-          </p>
-          <p className="mt-4">
-            The 29 years describe his career. They are not a statement of how long the company has traded.
           </p>
           <p className="mt-6">
             <a className="font-semibold text-navy underline decoration-bronze underline-offset-4" href={`mailto:${company.email}`}>

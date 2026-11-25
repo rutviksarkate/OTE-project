@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="lg:col-span-4">
           <Image src="/images/brand/ote-projects-logo-light.png" alt="OTE Projects" width={168} height={46} className="h-9 w-auto" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
-            {company.legalName} provides multidisciplinary engineering, project management, procurement support, construction management and commissioning for offshore facilities, refinery modifications and energy infrastructure.
+            {company.description}
           </p>
         </div>
         <div className="lg:col-span-2">

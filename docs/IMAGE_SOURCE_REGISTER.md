@@ -23,6 +23,10 @@ Stock licences: Unsplash and Pexels allow use without attribution. Photo identif
 | `public/images/library/factory-pipes.jpg` | Energy | Pexels 236722. Process plant at night. |
 | `public/images/library/storage-tanks.jpg` | Industrial infrastructure | Pexels 257700. Process columns and pipe racks. |
 | `public/images/library/pumpjack.jpg` | Contact band | Pexels 162568. Beam pump. |
+| `public/images/disciplines/piping.jpg` | Piping discipline | Company site photograph, supplied for the piping discipline. |
+| `public/images/disciplines/mechanical.jpg` | Mechanical discipline | Company site photograph, supplied for the mechanical discipline. |
+| `public/images/disciplines/electrical.jpg` | Electrical discipline | Company site photograph, supplied for the electrical discipline. |
+| `public/images/disciplines/site-visit.jpg` | Construction and project management | Company site-visit photograph on an offshore deck. |
 
 Not published, even though they appear in the source files:
 

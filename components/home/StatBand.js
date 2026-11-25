@@ -30,11 +30,12 @@ function useCount(target, run) {
 }
 
 function Stat({ metric, run }) {
-  const value = useCount(metric.value, run);
+  const counted = metric.value != null;
+  const value = useCount(metric.value ?? 0, run && counted);
   return (
     <div className="border-white/10 px-6 py-10 md:border-l md:first:border-l-0">
-      <p className="font-display text-5xl text-white">{value}</p>
-      <h3 className="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-bronze">{metric.label}</h3>
+      {counted ? <p className="font-display text-5xl text-white">{value}</p> : null}
+      <h3 className={counted ? "mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-bronze" : "font-display text-3xl leading-tight text-white"}>{metric.label}</h3>
       <p className="mt-2 text-sm leading-relaxed text-white/70">{metric.detail}</p>
     </div>
   );

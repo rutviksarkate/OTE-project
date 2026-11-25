@@ -14,6 +14,8 @@ export const disciplines = [
     summary: "Static and rotating equipment, from the datasheet through vendor review and installation support.",
     text: "Mechanical engineering covers the machines and vessels a modification depends on: what is specified, what a vendor offers, and whether the equipment can live with the piping, structure and operating cycle around it.",
     points: ["Equipment datasheets and specifications", "Vendor-document review", "Static and rotating equipment definition", "Installation and commissioning support"],
+    image: "/images/disciplines/mechanical.jpg",
+    imageAlt: "Mechanical equipment in an engine room, photographed on site.",
   },
   {
     slug: "piping",
@@ -22,6 +24,8 @@ export const disciplines = [
     summary: "Layout, specification and stress so a line can be fabricated and tied into equipment already in place.",
     text: "Piping is where a process scheme either fits the structure or fights it. The work is layout, material specification and flexibility, done so a line can be supported and connected to equipment that is already there.",
     points: ["Piping layout and material specification", "Stress and flexibility", "Tie-ins on operating plants", "Bills of material for fabrication"],
+    image: "/images/disciplines/piping.jpg",
+    imageAlt: "Piping, valves and a flexible hose on equipment pipework, photographed on site.",
   },
   {
     slug: "structural",
@@ -38,6 +42,9 @@ export const disciplines = [
     summary: "Planning, coordination and site engineering support from a defined scope through handover.",
     text: "Construction and project management keep engineering, procurement and site work on one plan.",
     points: ["Planning and progress control", "Interface coordination", "Construction engineering support", "Handover documentation"],
+    image: "/images/disciplines/site-visit.jpg",
+    imageAlt: "Site visit on an offshore deck.",
+    imagePosition: "object-top",
   },
   {
     slug: "electrical",
@@ -46,6 +53,8 @@ export const disciplines = [
     summary: "Power, distribution and the way essential loads behave when the normal supply is lost.",
     text: "Electrical engineering defines how a facility is powered, how a fault is cleared and how essential loads behave when the normal supply is gone. On a module it also decides cable weight and where the power interface sits.",
     points: ["Power and distribution studies", "Cable and load schedules", "Vendor package interfaces", "Electrical installation support"],
+    image: "/images/disciplines/electrical.jpg",
+    imageAlt: "An electrical cabinet photographed on site.",
   },
   {
     slug: "instrumentation",

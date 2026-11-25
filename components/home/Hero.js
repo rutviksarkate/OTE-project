@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const marks = ["Headquarters in Ras Al Khaimah", "Eight engineering disciplines", "ISO 9001 · 14001 · 45001"];
+const marks = ["Headquarters in Ras Al Khaimah", "Branch offices in Chennai and Port Harcourt", "Multidisciplinary engineering disciplines", "ISO 9001 · 14001 · 45001"];
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -41,7 +41,7 @@ export default function Hero() {
           Engineering and execution support for industrial energy projects.
         </motion.h1>
         <motion.p variants={item} className="mt-5 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
-          OTE Projects FZ LLC provides multidisciplinary engineering, project management, procurement support, construction management and commissioning for offshore facilities, refinery modifications and energy infrastructure.
+          OTE Projects FZ LLC provides Project Management Consultancy (PMC), multidisciplinary engineering and EPC support for FPSO, offshore facilities, refinery modifications and energy infrastructure.
         </motion.p>
         <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
           <Link href="/contact" className="btn-accent">
@@ -51,7 +51,7 @@ export default function Hero() {
             View project experience
           </Link>
         </motion.div>
-        <motion.ul variants={item} className="mt-12 grid gap-3 border-t border-white/15 pt-5 sm:grid-cols-3">
+        <motion.ul variants={item} className="mt-12 grid gap-3 border-t border-white/15 pt-5 sm:grid-cols-2 lg:grid-cols-4">
           {marks.map((mark) => (
             <li key={mark} className="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">
               {mark}

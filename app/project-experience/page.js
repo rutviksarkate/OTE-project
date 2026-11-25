@@ -26,7 +26,7 @@ export default function ProjectExperiencePage() {
       <PageIntro
         eyebrow="Projects"
         title="What the published scopes covered."
-        lede="Three engagements are described here. Client names, fields, quantities and a wider project register are not published."
+        lede="FPSO Mystras for NNPC, the Hawax tank farm in Kurdistan, and three engagements at Bushehr Refinery. A wider historical register is not published."
         crumbs={crumbs}
       />
       <div className="mx-auto max-w-7xl px-5 py-16">
@@ -34,6 +34,7 @@ export default function ProjectExperiencePage() {
           <article key={project.slug} className="border-t border-line py-12">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-bronze">{labels[project.category]}</p>
             <h2 className="mt-3 font-display text-4xl text-navy">{project.name}</h2>
+            {project.place ? <p className="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-steel">{project.place}</p> : null}
             <p className="mt-4 max-w-3xl leading-relaxed text-steel">{project.description}</p>
             <h3 className="mt-8 font-display text-2xl text-navy">Scope of work</h3>
             <ul className="mt-4 max-w-3xl space-y-3">

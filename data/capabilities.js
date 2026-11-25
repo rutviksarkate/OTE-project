@@ -3,7 +3,7 @@ export const capabilities = [
     slug: "engineering",
     href: "/engineering-epc",
     title: "Engineering",
-    text: "Multidisciplinary engineering from a bid through detailed design, as-built records and the interfaces a modification has to respect.",
+    text: "OTE Projects provides multidisciplinary engineering services from BID engineering and technical clarification through Pre-FEED, FEED, detailed engineering, procurement support, construction, commissioning and as-built documentation. Our engineers work closely with clients, EPC contractors, vendors and construction teams to ensure that engineering is practical, coordinated and suitable for execution.",
     image: "/images/library/refinery-night.jpg",
     imageAlt: "Process piping, vessels and a motor on a skid. Context photograph, not an OTE facility.",
   },

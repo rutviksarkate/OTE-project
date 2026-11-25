@@ -25,7 +25,7 @@ export default function Excellence() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">Engineering excellence</p>
           <h2 className="mt-3 max-w-3xl font-display text-3xl leading-tight text-navy md:text-5xl">Standards, safety and a scope that can be built.</h2>
           <p className="mt-5 max-w-3xl leading-relaxed text-steel">
-            Technical safety sits with the engineering: hazard identification, operability review and the controls a modification has to satisfy. Quality in the deliverable and safety in the activity are the company’s stated standard.
+            Quality in every deliverable. Safety in every activity. Responsibility in every decision. Technical safety sits with the engineering: hazard identification, operability review and the controls a modification has to satisfy.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">

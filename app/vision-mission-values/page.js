@@ -28,7 +28,7 @@ export default function VisionPage() {
         {[
           ["Vision", "Engineering that an operator can build, commission and live with, on offshore facilities and operating refineries."],
           ["Mission", "Carry a scope from bid engineering through start-up support without separating the disciplines that have to fit together."],
-          ["Values", "Be precise about the work. Hold quality, environment and occupational safety inside every job."],
+          ["Values", "Be precise about the work. Hold quality, environment and occupational safety inside every job. Quality in every deliverable. Safety in every activity. Responsibility in every decision."],
         ].map(([title, text]) => (
           <section key={title} className="border-t-2 border-bronze pt-6">
             <h2 className="font-display text-3xl text-navy">{title}</h2>

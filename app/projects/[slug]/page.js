@@ -38,16 +38,35 @@ export default async function ProjectPage({ params }) {
       <PageIntro eyebrow="Project" title={project.name} lede={project.summary} crumbs={crumbs} />
       <article className={`mx-auto grid max-w-7xl gap-12 px-5 py-16 ${project.image ? "lg:grid-cols-[1.1fr_0.9fr]" : "max-w-3xl"}`}>
         <div>
-          <p className="leading-relaxed text-steel">{project.description}</p>
-          <h2 className="mt-10 font-display text-3xl text-navy">Scope</h2>
-          <ol className="mt-4 space-y-4">
-            {project.scope.map((item, index) => (
-              <li key={item} className="grid grid-cols-[3rem_1fr] gap-3">
-                <span className="font-display text-2xl text-bronze">{String(index + 1).padStart(2, "0")}</span>
-                <span className="leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ol>
+          {project.place ? <p className="text-sm font-semibold uppercase tracking-[0.14em] text-bronze">{project.place}</p> : null}
+          <p className={`leading-relaxed text-steel ${project.place ? "mt-4" : ""}`}>{project.description}</p>
+          {project.blocks ? (
+            project.blocks.map((block) => (
+              <section key={block.title}>
+                <h2 className="mt-10 font-display text-3xl text-navy">{block.title}</h2>
+                {block.text ? <p className="mt-4 leading-relaxed text-steel">{block.text}</p> : null}
+                {block.points ? (
+                  <ul className="mt-4 space-y-3">
+                    {block.points.map((item) => (
+                      <li key={item} className="border-l-2 border-bronze pl-4 text-sm leading-relaxed">{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ))
+          ) : (
+            <>
+              <h2 className="mt-10 font-display text-3xl text-navy">Scope</h2>
+              <ol className="mt-4 space-y-4">
+                {project.scope.map((item, index) => (
+                  <li key={item} className="grid grid-cols-[3rem_1fr] gap-3">
+                    <span className="font-display text-2xl text-bronze">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ol>
+            </>
+          )}
           <h2 className="mt-10 font-display text-3xl text-navy">Disciplines</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {project.disciplines.map((item) => (

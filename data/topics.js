@@ -77,7 +77,7 @@ export const topics = {
     imageAlt: "A welder working on steel. Context photograph, not an OTE yard.",
     paragraphs: [
       "Fabrication support is the engineering a yard needs in order to cut, weld and assemble what was designed: piping material specifications, isometrics, bills of material, structural steel take-off and the resolution of what will not fit once steel is in the shop.",
-      "Fore-peak repairs on FPSO Mystras include replacement of deteriorated steel, with inspection and documentation. Interface management on that scope includes coordination with the fabrication yard. OTE Projects does not publish a fabrication facility of its own.",
+      "Fore-peak repairs on FPSO Mystras include replacement of deteriorated steel, about 150 tons subject to an ultrasonic thickness survey, with inspection and documentation. Interface management on that scope includes the fabrication yard, the supply vessel and FPSO operations. OTE Projects does not publish a fabrication facility of its own.",
     ],
     points: [
       "Piping material specifications and isometrics",
@@ -99,7 +99,7 @@ export const topics = {
     imageAlt: "A floating production unit at sea, with a flare burning from the boom.",
     paragraphs: [
       "Offshore work covers FPSO, FSO, FSRU and FLNG-related engineering, mobile offshore production units, platforms, topsides and the marine interfaces between hull and process.",
-      "FPSO Mystras is the published floating-facility scope: topside and engine-room rehabilitation, a distributed control and electrical and instrumentation upgrade, and fore-peak tank steel repairs. Field, client and quantities are not published.",
+      "FPSO Mystras is the published floating-facility scope for NNPC. The unit receives production from the Okono and Okpoho fields in block OPL 91, about 50 km offshore Port Harcourt. The work is topside and engine-room rehabilitation, a distributed control and electrical and instrumentation upgrade, and fore-peak tank steel repairs.",
     ],
     points: [
       "FPSO, FSO, FSRU and FLNG-related engineering",
@@ -143,7 +143,7 @@ export const topics = {
     imageAlt: "A process plant at night. Context photograph, not an OTE project.",
     paragraphs: [
       "Energy-sector work on this site means operating refineries and the utilities that let a facility run: power, water and the modular packages around them.",
-      "Bushehr Refinery is a project management consultancy, not a prime EPC contract. The published scope covers planning, tender engineering, coordination across disciplines, technical bid evaluation and assistance during pre-commissioning and commissioning.",
+      "Bushehr Refinery, for Energy Shab-He Ghare Passargad Co. Ltd., is consultancy and engineering support, not a prime EPC contract. The published work covers project management consultancy from 2023 to 2025, shutdown and turnaround support from 2017 to 2019, and a CDU furnace replacement in 2022.",
     ],
     points: [
       "Refinery brownfield modifications",
@@ -165,7 +165,7 @@ export const topics = {
     imageAlt: "Process columns and pipe racks. Context photograph, not an OTE project.",
     paragraphs: [
       "Industrial infrastructure, as published, is the storage and transfer work around oil, gas and refined products, together with the utilities a facility needs in order to operate.",
-      "Hawax is detailed engineering for a jet fuel and diesel tank farm and its transfer facilities: tanks, pipelines, pumps, loading and unloading, and the civil, structural, mechanical, piping, electrical, instrumentation and fire-protection design. Client, country and year are not published.",
+      "Hawax is detailed engineering for Hawax Corporation: a jet fuel and diesel tank farm and its transfer facilities in Kurdistan, Iraq, recorded for 2025. The scope covers tanks, pipelines, pumps, loading and unloading, and the civil, structural, mechanical, piping, electrical, instrumentation and fire-protection design.",
     ],
     points: [
       "Storage tanks and tank farms",

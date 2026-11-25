@@ -12,7 +12,7 @@ export const primaryNav = [
     links: [
       { href: "/about", label: "Company Overview", text: "Who the company is, and where it works from." },
       { href: "/leadership", label: "Leadership", text: "General Manager – Projects." },
-      { href: "/engineering-disciplines", label: "Our Expertise", text: "Eight disciplines, delivered as one set." },
+      { href: "/engineering-disciplines", label: "Our Expertise", text: "Multidisciplinary engineering disciplines, delivered as one set." },
       { href: "/quality-safety", label: "Quality & Safety", text: "ISO 9001, ISO 14001 and ISO 45001." },
     ],
   },
@@ -21,7 +21,7 @@ export const primaryNav = [
     href: "/capabilities",
     summary: "Engineering, procurement support, construction management and commissioning, held in one team.",
     links: [
-      { href: "/engineering-epc", label: "Engineering", text: "BID engineering through detailed design and as-built." },
+      { href: "/engineering-epc", label: "Engineering", text: "BID engineering through detailed design, construction support and as-built." },
       { href: "/procurement", label: "Procurement", text: "Requisitions, datasheets and technical bid review." },
       { href: "/construction", label: "Construction", text: "Site engineering, interfaces and supervision." },
       { href: "/modular-solutions", label: "Modular Solutions", text: "Modules, skids and topside packages." },
@@ -43,7 +43,7 @@ export const primaryNav = [
   {
     label: "Projects",
     href: "/projects",
-    summary: "Three scopes are published. A wider project register is not on this site.",
+    summary: "Three scopes are published: FPSO Mystras, Hawax and Bushehr Refinery.",
     links: [
       { href: "/projects", label: "Project Portfolio", text: "FPSO Mystras, Hawax and Bushehr Refinery." },
       { href: "/project-experience", label: "Project Experience", text: "What each published scope covered." },
